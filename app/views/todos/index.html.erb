@@ -1,0 +1,6 @@
+<h1>Todos List</h1>
+<ul>
+  <% @todo.each do |todo| %>
+    <li><%= todo.title %> - <%= todo.isCompleted ? 'Completed' : 'Not Completed' %></li>
+  <% end %>
+</ul>
