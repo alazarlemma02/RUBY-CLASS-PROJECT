@@ -13,5 +13,17 @@ RSpec.describe TodosController, type: :controller do
 
   end
 
+  describe 'GET #new' do
+    it_behaves_like 'controller validations', :todolist, [:title]
+
+    before{get :new}
+
+    it 'renders the new template' do
+      expect(response).to render_template('new')
+    end
+
+  end
+
+
 
 end

@@ -1,0 +1,13 @@
+<%= form_for @todo, url: todos_path do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :isCompleted %>
+    <%= f.check_box :isCompleted %>
+  </div>
+  <div>
+    <%= f.submit 'Create Todo' %>
+  </div>
+<% end %>
